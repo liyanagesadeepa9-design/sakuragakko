@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Kanji Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-language"></i> Japanese Kanji Quiz</h1>
+            <p class="subtitle">Test your knowledge of N5 and N4 level kanji characters</p>
+        </header>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+            <div class="progress-text" id="progressText">Select difficulty to begin</div>
+        </div>
+        
+        <!-- JLPT Selection Screen -->
+        <div class="card selection-screen" id="jlptSelectionScreen">
+            <h2>Select JLPT Level</h2>
+            <div class="level-buttons">
+                <button class="level-btn" id="n5Btn">
+                    <i class="fas fa-star"></i> N5 Kanji
+                    <span class="level-count">(80 kanji)</span>
+                </button>
+                <button class="level-btn" id="n4Btn">
+                    <i class="fas fa-star-half-alt"></i> N4 Kanji
+                    <span class="level-count">(170 kanji)</span>
+                </button>
+            </div>
+            <p class="subtitle">Each level tests a specific set of kanji</p>
+        </div>
+        
+        <!-- Quiz Type Selection Screen -->
+        <div class="card selection-screen hidden" id="quizTypeScreen">
+            <h2>Select Quiz Type</h2>
+            <div class="quiz-type-info">
+                <p>Selected: <strong><span id="selectedJlptLevel">N5</span></strong></p>
+            </div>
+            <div class="quiz-type-buttons">
+                <button class="quiz-type-btn" id="kanjiToEnglishBtn">
+                    <i class="fas fa-language"></i>
+                    <span class="quiz-type-title">Kanji to English</span>
+                    <span class="quiz-type-desc">Shows kanji, choose English meaning</span>
+                </button>
+                <button class="quiz-type-btn" id="englishToKanjiBtn">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span class="quiz-type-title">English to Kanji</span>
+                    <span class="quiz-type-desc">Shows English meaning, choose correct kanji</span>
+                </button>
+            </div>
+            
+            <button class="back-btn" id="backToJlptBtn">
+                <i class="fas fa-arrow-left"></i> Back to JLPT Selection
+            </button>
+        </div>
+        
+        <!-- Level Selection Screen -->
+        <div class="card selection-screen hidden" id="levelSelectionScreen">
+            <h2>Select Level</h2>
+            <div class="level-selection-info">
+                <p><strong><span id="selectedQuizType">Kanji to English</span> - <span id="selectedJlptType">N5</span></strong></p>
+                <p>Select a level between 1-10. Each level tests progressively more kanji.</p>
+            </div>
+            
+            <div class="level-grid" id="levelGrid">
+                <!-- Level buttons will be generated here -->
+            </div>
+            
+            <div class="level-buttons">
+                <button class="back-btn" id="backToQuizTypeBtn">
+                    <i class="fas fa-arrow-left"></i> Back to Quiz Type
+                </button>
+            </div>
+        </div>
+        
+        <!-- Quiz Screen -->
+        <div class="card quiz-screen hidden" id="quizScreen">
+            <h2 id="quizTitle">Kanji Quiz</h2>
+            
+            <div class="quiz-info">
+                <div>Question: <span id="currentQuestionNumber">1</span>/<span id="totalQuestions">10</span></div>
+                <div>Level: <span id="currentLevel">1</span></div>
+            </div>
+            
+            <div class="question-display" id="questionDisplay">
+                <div class="kanji-display" id="kanjiDisplay">一</div>
+                <div class="meaning-display hidden" id="meaningDisplay">one</div>
+            </div>
+            
+            <div class="answers-container" id="answersContainer">
+                <!-- Answer buttons will be generated here -->
+            </div>
+            
+            <button class="next-btn hidden" id="nextBtn">
+                Next Question <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <!-- Results Screen -->
+        <div class="card results-screen hidden" id="resultsScreen">
+            <h2>Quiz Completed!</h2>
+            <p class="subtitle">Your results for <span id="resultsQuizType">Kanji to English</span> - <span id="resultsJlpt">N5</span> Level <span id="resultsLevelNum">1</span></p>
+            
+            <div class="score-circle" id="scoreCircle">
+                <div class="score-inner">
+                    <div class="score-text" id="scoreText">0%</div>
+                    <div class="score-label">Score</div>
+                </div>
+            </div>
+            
+            <div class="results-details" id="resultsDetails">
+                <!-- Results will be populated here -->
+            </div>
+            
+            <div class="level-buttons">
+                <button class="restart-btn" id="restartBtn">
+                    <i class="fas fa-redo"></i> Restart Quiz
+                </button>
+                <button class="back-btn" id="backToLevelSelectionBtn">
+                    <i class="fas fa-list"></i> Select Different Level
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Practice makes perfect! Keep studying to master Japanese kanji.</p>
+    </div>
+
+    <script src="kanji-data.js"></script>
+    <script src="quiz-app.js"></script>
+</body>
+</html>
