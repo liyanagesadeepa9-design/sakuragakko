@@ -128,7 +128,6 @@
 .character-card {
     background-color: var(--bg-secondary);
     border-radius: 12px;
-    padding: 1.5rem 1rem;
     padding: 0.3rem;
     text-align: center;
     transition: all 0.3s ease;
@@ -219,13 +218,18 @@
     .characters-grid {
         grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     }
+
+    .character-card {
+        padding: 0.2rem;
+        border: 2px solid transparent;
+    }
     
     .character-jp {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .character-card .lang {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -512,4 +516,5 @@
     to {
         opacity: 0;
     }
+
 }
