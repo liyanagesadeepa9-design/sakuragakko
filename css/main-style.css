@@ -983,9 +983,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    html {
-        background: red;
-    }
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -1081,4 +1078,5 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+
 }
