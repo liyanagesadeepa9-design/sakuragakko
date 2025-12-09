@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Gakko - Learning Platform</title>
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+</head>
+<body class="dark-theme">
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <i class="fas fa-school logo-icon"></i>
+                    <h1 class="logo">Sakura Gakko</h1>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a href="#learning" class="nav-link"><i class="fas fa-book-open"></i> Learning</a></li>
+                    <li class="nav-item"><a href="#practice" class="nav-link"><i class="fas fa-pencil-alt"></i> Practice</a></li>
+                    <li class="nav-item"><a href="#exam" class="nav-link"><i class="fas fa-clipboard-list"></i> Exam</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <span class="theme-text">Dark Mode</span>
+                    </button>
+                </div>
+                
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="page-section active-section">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title">Welcome to <span class="highlight">Sakura Gakko</span></h2>
+                    <p class="hero-subtitle">Your personal Japanese learning platform</p>
+                    <p class="hero-description">Master Japanese language and culture through interactive lessons, practice exercises, and comprehensive exams.</p>
+                    <div class="hero-actions">
+                        <a href="#learning" class="btn btn-primary" id="startLearningBtn">Start Learning</a>
+                        <a href="#practice" class="btn btn-secondary" id="tryPracticeBtn">Try Practice</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <h3 class="section-title">Why Choose Sakura Gakko?</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>Interactive Lessons</h4>
+                        <p>Engaging multimedia lessons with audio pronunciation and cultural notes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Smart Practice</h4>
+                        <p>Adaptive practice exercises that adjust to your skill level and progress.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Progress Tracking</h4>
+                        <p>Monitor your improvement with detailed analytics and performance reports.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Certification Exams</h4>
+                        <p>Official preparation for JLPT (Japanese Language Proficiency Test).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="learning" class="page-section">
+            <div class="section-header">
+                <h2 class="section-title">Learning Materials</h2>
+                <p class="section-subtitle">Browse our comprehensive curriculum</p>
+            </div>
+            
+            <div class="learning-content">
+                <div class="level-selector">
+                    <button class="level-btn active" data-level="n5">Beginner (N5)</button>
+                    <button class="level-btn" data-level="n4">Elementary (N4)</button>
+                    <button class="level-btn" data-level="n3" disabled>Intermediate (N3)</button>
+                    <button class="level-btn" data-level="n2" disabled>Advanced (N2)</button>
+                    <button class="level-btn" data-level="n1" disabled>Fluent (N1)</button>
+                </div>
+                
+                <!-- In the lessons-container div in the Learning section -->
+                <div class="lessons-container active" id="n5-lessons">
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 1</span>
+                            <span class="lesson-difficulty easy">Easy</span>
+                        </div>
+                        <h3 class="lesson-title">Hiragana</h3>
+                        <p class="lesson-description">Learn the Japanese syllabaries with interactive writing practice and pronunciation guides.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 45 min</span>
+                            <button class="btn btn-small start-lesson" data-lesson="hiragana">Start Lesson</button>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 2</span>
+                            <span class="lesson-difficulty easy">Easy</span>
+                        </div>
+                        <h3 class="lesson-title">Katakana</h3>
+                        <p class="lesson-description">Learn the Japanese syllabaries with interactive writing practice and pronunciation guides.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 45 min</span>
+                            <button class="btn btn-small start-lesson" data-lesson="katakana">Start Lesson</button>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 3</span>
+                            <span class="lesson-difficulty easy">Easy</span>
+                        </div>
+                        <h3 class="lesson-title">Basic Greetings</h3>
+                        <p class="lesson-description">Master essential Japanese greetings and daily expressions with audio examples.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 30 min</span>
+                            <button class="btn btn-small start-lesson" data-lesson="greetings">Start Lesson</button>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 4</span>
+                            <span class="lesson-difficulty medium">Medium</span>
+                        </div>
+                        <h3 class="lesson-title">Kanji</h3>
+                        <p class="lesson-description">Learn essential Kanji characters for numbers, nature, and common objects with stroke order guides.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 120 min</span>
+                            <button class="btn btn-small start-lesson" data-lesson="kanji">Start Lesson</button>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 5</span>
+                            <span class="lesson-difficulty medium">Medium</span>
+                        </div>
+                        <h3 class="lesson-title">Introducing Yourself</h3>
+                        <p class="lesson-description">Learn how to introduce yourself, talk about your hobbies and occupation.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 60 min</span>
+                            <button class="btn btn-small start-lesson" data-lesson="introduction">Start Lesson</button>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 6</span>
+                            <span class="lesson-difficulty medium">Medium</span>
+                        </div>
+                        <h3 class="lesson-title">Numbers & Counting</h3>
+                        <p class="lesson-description">Master Japanese numbers, counting systems, and basic mathematics vocabulary.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 50 min</span>
+                            <button class="btn btn-small start-lesson" data-lesson="numbers">Start Lesson</button>
+                        </div>
+                    </div>
+                </div>
+  
+                <!-- N4 Lessons Container (Hidden by default) -->
+                <div class="lessons-container" id="n4-lessons">
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 1</span>
+                            <span class="lesson-difficulty medium">Medium</span>
+                        </div>
+                        <h3 class="lesson-title">Family & Relationships</h3>
+                        <p class="lesson-description">Learn vocabulary for family members and how to talk about relationships.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 40 min</span>
+                            <button class="btn btn-small" disabled>Locked</button>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 2</span>
+                            <span class="lesson-difficulty medium">Medium</span>
+                        </div>
+                        <h3 class="lesson-title">Daily Activities</h3>
+                        <p class="lesson-description">Learn how to describe your daily routine and activities.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 55 min</span>
+                            <button class="btn btn-small" disabled>Locked</button>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 3</span>
+                            <span class="lesson-difficulty hard">Hard</span>
+                        </div>
+                        <h3 class="lesson-title">Shopping & Prices</h3>
+                        <p class="lesson-description">Master shopping vocabulary, prices, and store interactions.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 65 min</span>
+                            <button class="btn btn-small" disabled>Locked</button>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card">
+                        <div class="lesson-header">
+                            <span class="lesson-number">Lesson 4</span>
+                            <span class="lesson-difficulty hard">Hard</span>
+                        </div>
+                        <h3 class="lesson-title">Transportation</h3>
+                        <p class="lesson-description">Learn vocabulary for different modes of transportation and directions.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-duration"><i class="far fa-clock"></i> 50 min</span>
+                            <button class="btn btn-small" disabled>Locked</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- N3 Lessons Container (Hidden by default) -->
+                <div class="lessons-container" id="n3-lessons">
+                    <!-- N3 lesson cards would go here -->
+                    <div class="locked-level">
+                        <i class="fas fa-lock fa-3x"></i>
+                        <h3>Intermediate Level (N3) Locked</h3>
+                        <p>Complete all N4 lessons to unlock Intermediate level content.</p>
+                    </div>
+                </div>
+
+                <!-- N2 Lessons Container (Hidden by default) -->
+                <div class="lessons-container" id="n2-lessons">
+                    <div class="locked-level">
+                        <i class="fas fa-lock fa-3x"></i>
+                        <h3>Advanced Level (N2) Locked</h3>
+                        <p>Complete all N3 lessons to unlock Advanced level content.</p>
+                    </div>
+                </div>
+
+                <!-- N1 Lessons Container (Hidden by default) -->
+                <div class="lessons-container" id="n1-lessons">
+                    <div class="locked-level">
+                        <i class="fas fa-lock fa-3x"></i>
+                        <h3>Fluent Level (N1) Locked</h3>
+                        <p>Complete all N2 lessons to unlock Fluent level content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="practice" class="page-section">
+            <div class="section-header">
+                <h2 class="section-title">Practice Exercises</h2>
+                <p class="section-subtitle">Select a category to start practicing</p>
+            </div>
+            
+            <div class="practice-content">
+                <!-- Practice Type Tabs -->
+                <div class="practice-tabs">
+                    <button class="practice-tab active" data-tab="kanji">
+                        <i class="fas fa-book-open"></i>
+                        <span>Kanji</span>
+                    </button>
+                    <button class="practice-tab" data-tab="vocabulary">
+                        <i class="fas fa-spell-check"></i>
+                        <span>Vocabulary</span>
+                    </button>
+                    <button class="practice-tab disabled" data-tab="grammar">
+                        <i class="fas fa-language"></i>
+                        <span>Grammar</span>
+                        <span class="lock-icon"><i class="fas fa-lock"></i></span>
+                    </button>
+                    <button class="practice-tab disabled" data-tab="listening">
+                        <i class="fas fa-volume-up"></i>
+                        <span>Listening</span>
+                        <span class="lock-icon"><i class="fas fa-lock"></i></span>
+                    </button>
+                    <button class="practice-tab disabled" data-tab="reading">
+                        <i class="fas fa-book-reader"></i>
+                        <span>Reading</span>
+                        <span class="lock-icon"><i class="fas fa-lock"></i></span>
+                    </button>
+                    <button class="practice-tab disabled" data-tab="writing">
+                        <i class="fas fa-edit"></i>
+                        <span>Writing</span>
+                        <span class="lock-icon"><i class="fas fa-lock"></i></span>
+                    </button>
+                </div>
+
+                <!-- Kanji -->
+                <div class="practice-tab-content active" id="kanji-content">
+                    <h3 class="tab-title">Kanji Practice</h3>
+                    <p class="tab-description">Master Japanese characters by JLPT level</p>
+                    
+                    <div class="practice-cards">
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-torii-gate"></i>
+                            </div>
+                            <h4>N5</h4>
+                            <p>Learn Kanji for N5 level</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 100 words</span>
+                                <span><i class="far fa-clock"></i> 60 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-chess-rook"></i>
+                            </div>
+                            <h4>N4</h4>
+                            <p>Learn Kanji for N4 level</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 200 words</span>
+                                <span><i class="far fa-clock"></i> 120 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vocabulary Content (Visible by default) -->
+                <div class="practice-tab-content" id="vocabulary-content">
+                    <h3 class="tab-title">Vocabulary Practice</h3>
+                    <p class="tab-description">Build your Japanese vocabulary with these categories</p>
+                    
+                    <div class="practice-cards">
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4>Nouns</h4>
+                            <p>Learn common Japanese nouns for everyday objects, people, and places.</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 50 words</span>
+                                <span><i class="far fa-clock"></i> 30 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h4>Adjectives</h4>
+                            <p>Master descriptive words for colors, sizes, emotions, and qualities.</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 40 words</span>
+                                <span><i class="far fa-clock"></i> 25 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <h4>Verbs</h4>
+                            <p>Learn action words and their conjugations in different tenses.</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 60 words</span>
+                                <span><i class="far fa-clock"></i> 45 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Common Phrases</h4>
+                            <p>Essential phrases for greetings, shopping, dining, and travel.</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 100 phrases</span>
+                                <span><i class="far fa-clock"></i> 60 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grammar Content (Hidden by default) -->
+                <div class="practice-tab-content" id="grammar-content">
+                    <h3 class="tab-title">Grammar Practice</h3>
+                    <p class="tab-description">Master Japanese grammar patterns and structures</p>
+                    
+                    <div class="practice-cards">
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-font"></i>
+                            </div>
+                            <h4>Particles</h4>
+                            <p>Learn essential particles (は, が, を, に, で) and their usage.</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 12 particles</span>
+                                <span><i class="far fa-clock"></i> 40 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h4>Verb Conjugation</h4>
+                            <p>Practice present, past, negative, and polite verb forms.</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 8 patterns</span>
+                                <span><i class="far fa-clock"></i> 50 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h4>Sentence Structure</h4>
+                            <p>Learn SOV order and how to form basic to complex sentences.</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 15 structures</span>
+                                <span><i class="far fa-clock"></i> 55 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <div class="card-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h4>Questions & Negatives</h4>
+                            <p>Form questions and negative sentences correctly.</p>
+                            <div class="card-stats">
+                                <span><i class="far fa-file-alt"></i> 10 patterns</span>
+                                <span><i class="far fa-clock"></i> 35 min</span>
+                            </div>
+                            <button class="btn btn-small card-btn">Start Practice</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Locked Content Sections -->
+                <div class="practice-tab-content" id="listening-content">
+                    <div class="locked-content">
+                        <i class="fas fa-lock fa-3x"></i>
+                        <h3>Listening Practice Locked</h3>
+                        <p>Complete Vocabulary and Grammar sections to unlock Listening practice.</p>
+                    </div>
+                </div>
+                
+                <div class="practice-tab-content" id="reading-content">
+                    <div class="locked-content">
+                        <i class="fas fa-lock fa-3x"></i>
+                        <h3>Reading Practice Locked</h3>
+                        <p>Complete Vocabulary, Grammar, and Listening to unlock Reading practice.</p>
+                    </div>
+                </div>
+                
+                <div class="practice-tab-content" id="writing-content">
+                    <div class="locked-content">
+                        <i class="fas fa-lock fa-3x"></i>
+                        <h3>Writing Practice Locked</h3>
+                        <p>Complete all other sections to unlock Writing practice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="exam" class="page-section">
+            <div class="section-header">
+                <h2 class="section-title">Exam Preparation</h2>
+                <p class="section-subtitle">Prepare for official Japanese language tests</p>
+            </div>
+            
+            <div class="exam-content">
+                <div class="exam-info">
+                    <p>Our exam preparation materials are designed to help you succeed in the official <strong>Japanese Language Proficiency Test (JLPT)</strong>. Choose your target level and start practicing with simulated exams.</p>
+                    
+                    <div class="exam-stats">
+                        <div class="stat-card">
+                            <h3>5</h3>
+                            <p>JLPT Levels</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>120+</h3>
+                            <p>Practice Tests</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>95%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exam-cards">
+                    <div class="exam-card">
+                        <div class="exam-card-header n5">
+                            <h3>JLPT N5</h3>
+                            <span class="exam-level">Beginner</span>
+                        </div>
+                        <div class="exam-card-body">
+                            <ul class="exam-details">
+                                <li><i class="fas fa-check-circle"></i> Basic grammar</li>
+                                <li><i class="fas fa-check-circle"></i> ~100 kanji</li>
+                                <li><i class="fas fa-check-circle"></i> ~800 vocabulary</li>
+                                <li><i class="fas fa-check-circle"></i> Simple conversations</li>
+                            </ul>
+                            <button class="btn btn-block">Start N5 Mock Test</button>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-card">
+                        <div class="exam-card-header n4">
+                            <h3>JLPT N4</h3>
+                            <span class="exam-level">Elementary</span>
+                        </div>
+                        <div class="exam-card-body">
+                            <ul class="exam-details">
+                                <li><i class="fas fa-check-circle"></i> Basic sentence patterns</li>
+                                <li><i class="fas fa-check-circle"></i> ~300 kanji</li>
+                                <li><i class="fas fa-check-circle"></i> ~1,500 vocabulary</li>
+                                <li><i class="fas fa-check-circle"></i> Everyday conversations</li>
+                            </ul>
+                            <button class="btn btn-block">Start N4 Mock Test</button>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-card">
+                        <div class="exam-card-header n3">
+                            <h3>JLPT N3</h3>
+                            <span class="exam-level">Intermediate</span>
+                        </div>
+                        <div class="exam-card-body">
+                            <ul class="exam-details">
+                                <li><i class="fas fa-check-circle"></i> Daily life materials</li>
+                                <li><i class="fas fa-check-circle"></i> ~650 kanji</li>
+                                <li><i class="fas fa-check-circle"></i> ~3,750 vocabulary</li>
+                                <li><i class="fas fa-check-circle"></i> Newspaper headlines</li>
+                            </ul>
+                            <button class="btn btn-block">Start N3 Mock Test</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exam-tips">
+                    <h3><i class="fas fa-lightbulb"></i> Exam Tips</h3>
+                    <ul>
+                        <li>Start with the level you feel comfortable with and gradually progress.</li>
+                        <li>Take full-length mock exams under timed conditions.</li>
+                        <li>Review incorrect answers to understand your weak areas.</li>
+                        <li>Practice reading and listening sections regularly.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sakura Gakko</h3>
+                <p>Your trusted partner in Japanese language education since 2025.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#learning">Learning</a></li>
+                    <li><a href="#practice">Practice</a></li>
+                    <li><a href="#exam">Exam</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope"></i> contact@sakura-gakko.com</p>
+                <p><i class="fas fa-phone"></i> +81 3-1234-5678</p>
+                <p><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sakura Gakko. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main-js.js"></script>
+</body>
+</html>
