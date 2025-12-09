@@ -225,11 +225,11 @@
     }
     
     .character-jp {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
     
     .character-card .lang {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 }
 
@@ -518,3 +518,4 @@
     }
 
 }
+
