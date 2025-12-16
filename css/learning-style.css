@@ -96,4 +96,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    #learning-main {
+        padding: 0;
+    }
 }
