@@ -74,7 +74,7 @@ class LanguageManager {
         
         // Update button text
         if (this.langText) {
-            this.langText.textContent = lang === 'english' ? 'English' : 'සිංහල';
+            this.langText.textContent = lang === 'english' ? 'En' : 'සිං';
         }
         
         // Update active state in dropdown
@@ -142,4 +142,5 @@ function applyCurrentLanguage() {
         englishElements.forEach(el => el.classList.add('lang-hidden'));
         sinhalaElements.forEach(el => el.classList.remove('lang-hidden'));
     }
+
 }
