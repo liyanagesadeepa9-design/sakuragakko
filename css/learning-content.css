@@ -134,12 +134,12 @@
     cursor: pointer;
     border: 2px solid transparent;
 }
-
+/*
 .character-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
+}*/
 
 .character-jp {
     font-family: 'Noto Sans JP', sans-serif;
@@ -266,7 +266,7 @@
     opacity: 0;
 }
 
-/* Character Card Color Variations */
+/* Character Card Color Variations *
 .characters-grid.basic .character-card {
     background: linear-gradient(135deg, rgba(157, 78, 221, 0.1), rgba(157, 78, 221, 0.05));
 }
@@ -277,7 +277,7 @@
 
 .characters-grid.youon .character-card {
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
-}
+}*/
 
 /*****************************************************************************/
 /***** GREETINGS *****/
@@ -533,5 +533,6 @@
     }
 
 }
+
 
 
