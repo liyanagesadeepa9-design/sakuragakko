@@ -3,8 +3,7 @@
 /* Base Styles and Variables */
 :root {
     /* Dark Theme (Default) */
-    /*--primary-color: #9d4edd;*/
-    --primary-color: #ff0000;
+    --primary-color: #9d4edd;
     --primary-dark: #7b2cbf;
     --secondary-color: #ff9e00;
     --text-color: #f8f9fa;
@@ -1081,4 +1080,5 @@ footer {
     to { opacity: 1; }
 
 }
+
 
