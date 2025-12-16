@@ -213,8 +213,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.answer-btn .lang-english,
-.answer-btn .lang-sinhala {
+.answer-btn .lang {
     font-size: 1.2rem;
     color: var(--text-color);
     font-weight: 500;
@@ -437,4 +436,5 @@
     .result-question {
         font-size: 1rem;
     }
+
 }
