@@ -13,33 +13,48 @@ function openHiraganaLesson() {
         
         <h3 class="section-title">Basic Characters (46)</h3>
         <div class="characters-grid basic">
-            ${hiragana.basic.map(char => `
+            ${hiragana.basic.map(char => {
+                if (!char.character || char.character.trim() === '') {
+                    return `<div class="character-card" style="background: transparent; box-shadow: none;"></div>`;
+                }
+                return `
                 <div class="character-card">
                     <div class="character-jp">${char.character}</div>
                     <div class="lang-english">${char.romaji}</div>
                     <div class="lang-sinhala">${char.sinhala}</div>
                 </div>
-            `).join('')}
+                `;
+            }).join('')}
         </div>
         <h3 class="section-title">Voiced Sounds (Dakuon)</h3>
         <div class="characters-grid dakuon">
-            ${hiragana.additional1.map(char => `
+            ${hiragana.additional1.map(char => {
+                if (!char.character || char.character.trim() === '') {
+                    return `<div class="character-card" style="background: transparent; box-shadow: none;"></div>`;
+                }
+                return `
                 <div class="character-card">
                     <div class="character-jp">${char.character}</div>
                     <div class="lang-english">${char.romaji}</div>
                     <div class="lang-sinhala">${char.sinhala}</div>
                 </div>
-            `).join('')}
+                `;
+            }).join('')}
         </div>
         <h3 class="section-title">Contracted Sounds (Youon)</h3>
         <div class="characters-grid youon">
-            ${hiragana.additional2.map(char => `
+            ${hiragana.additional2.map(char => {
+                if (!char.character || char.character.trim() === '') {
+                    return `<div class="character-card" style="background: transparent; box-shadow: none;"></div>`;
+                }
+                return `
                 <div class="character-card">
                     <div class="character-jp">${char.character}</div>
                     <div class="lang-english">${char.romaji}</div>
                     <div class="lang-sinhala">${char.sinhala}</div>
                 </div>
-            `).join('')}
+                `;
+            }).join('')}
         </div>
     `;
 }
@@ -53,39 +68,54 @@ function openKatakanaLesson() {
                     <div class="lesson-kanji">カタカナ</div>
                     <div class="lesson-title">Katakana</div>
                 </div>
-                <p class="lesson-subtitle">Japanese Syllabary for Native Words - 46 basic characters with voiced and contracted sounds</p>
+                <p class="lesson-subtitle">Japanese Syllabary for Foreign Words - 46 basic characters with voiced and contracted sounds</p>
             </div>
         </div>
         
         <h3 class="section-title">Basic Characters (46)</h3>
         <div class="characters-grid basic">
-            ${katakana.basic.map(char => `
+            ${katakana.basic.map(char => {
+                if (!char.character || char.character.trim() === '') {
+                    return `<div class="character-card" style="background: transparent; box-shadow: none;"></div>`;
+                }
+                return `
                 <div class="character-card">
                     <div class="character-jp">${char.character}</div>
-                    <div class="lang lang-english">${char.romaji}</div>
-                    <div class="lang lang-sinhala">${char.sinhala}</div>
+                    <div class="lang-english">${char.romaji}</div>
+                    <div class="lang-sinhala">${char.sinhala}</div>
                 </div>
-            `).join('')}
+                `;
+            }).join('')}
         </div>
         <h3 class="section-title">Voiced Sounds (Dakuon)</h3>
         <div class="characters-grid dakuon">
-            ${katakana.additional1.map(char => `
+            ${katakana.additional1.map(char => {
+                if (!char.character || char.character.trim() === '') {
+                    return `<div class="character-card" style="background: transparent; box-shadow: none;"></div>`;
+                }
+                return `
                 <div class="character-card">
                     <div class="character-jp">${char.character}</div>
-                    <div class="lang lang-english">${char.romaji}</div>
-                    <div class="lang lang-sinhala">${char.sinhala}</div>
+                    <div class="lang-english">${char.romaji}</div>
+                    <div class="lang-sinhala">${char.sinhala}</div>
                 </div>
-            `).join('')}
+                `;
+            }).join('')}
         </div>
         <h3 class="section-title">Contracted Sounds (Youon)</h3>
         <div class="characters-grid youon">
-            ${katakana.additional2.map(char => `
+            ${katakana.additional2.map(char => {
+                if (!char.character || char.character.trim() === '') {
+                    return `<div class="character-card" style="background: transparent; box-shadow: none;"></div>`;
+                }
+                return `
                 <div class="character-card">
                     <div class="character-jp">${char.character}</div>
-                    <div class="lang lang-english">${char.romaji}</div>
-                    <div class="lang lang-sinhala">${char.sinhala}</div>
+                    <div class="lang-english">${char.romaji}</div>
+                    <div class="lang-sinhala">${char.sinhala}</div>
                 </div>
-            `).join('')}
+                `;
+            }).join('')}
         </div>
     `;
 }
@@ -181,4 +211,5 @@ function showKanjiDetails(index) {
         }
     };
     document.addEventListener('keydown', closeOnEscape);
+
 }
